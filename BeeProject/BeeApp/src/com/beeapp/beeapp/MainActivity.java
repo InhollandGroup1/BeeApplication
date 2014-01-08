@@ -62,6 +62,12 @@ public class MainActivity extends Activity implements TextWatcher {
 		timerHandler.removeCallbacks(timerRunnable);
 	}
 
+	public boolean profileBtnClicked(MenuItem menuItem) {
+		Intent intent = new Intent(MainActivity.this, UserActivity.class);
+		startActivity(intent);
+		return true;
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

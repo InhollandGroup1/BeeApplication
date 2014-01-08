@@ -45,12 +45,7 @@ public class MainMenuActivity extends Activity {
             }
         });
 	}
-
-	/*public boolean profileBtnClicked(MenuItem menuItem) {
-		Intent intent = new Intent(MainMenuActivity.this, UserActivity.class);
-		startActivity(intent);
-		return true;
-	}*/
+	
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */
