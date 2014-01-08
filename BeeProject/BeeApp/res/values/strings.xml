@@ -20,9 +20,13 @@
     <string name="Search">Search:</string>
     <string name="SearchHint">Enter keyword(s)</string>
     <string name="diseaseimage">Disease Image</string>
+    <string name="title_activity_disease_detail">Disease Details</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_user">UserActivity</string>
     <string name="userdetails">USER DETAILS</string>
-    <string name="username">Name:</string>
-    <string name="usersurname">Surname:</string>
-    <string name="useremail">Email:</string>
+    <string name="username">Name: </string>
+    <string name="usersurname">Surname: </string>
+    <string name="useremail">Email: </string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
 
 </resources>

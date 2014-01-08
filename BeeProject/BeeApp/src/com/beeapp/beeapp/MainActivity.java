@@ -85,11 +85,7 @@ public class MainActivity extends Activity implements TextWatcher {
 	    });
 	}
 	
-	public boolean profileBtnClicked(MenuItem menuItem) {
-		Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-		startActivity(intent);
-		return true;
-	}
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

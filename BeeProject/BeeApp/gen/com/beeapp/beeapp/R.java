@@ -36,69 +36,51 @@ public final class R {
         public static final int ic_launcher=0x7f020009;
     }
     public static final class id {
-<<<<<<< HEAD
-        public static final int action_settings=0x7f090015;
-        public static final int addLocation=0x7f09000c;
-        public static final int confirmPassword=0x7f09000b;
-        public static final int diseaseBlurb=0x7f090010;
-        public static final int diseaseImage=0x7f09000f;
-        public static final int diseaseName=0x7f090004;
-        public static final int editText1=0x7f090005;
-        public static final int email=0x7f09000a;
-        public static final int enterEmail=0x7f090000;
-        public static final int enterPassword=0x7f090001;
-        public static final int firstName=0x7f090007;
-        public static final int healthCoordinator=0x7f09000e;
-        public static final int lastName=0x7f090008;
-        public static final int listView1=0x7f090006;
-        public static final int loginButton=0x7f090003;
-        public static final int password=0x7f090009;
-        public static final int signupBtn=0x7f09000d;
-        public static final int signupLink=0x7f090002;
-        public static final int userdetails=0x7f090011;
-        public static final int useremail=0x7f090013;
-        public static final int username=0x7f090012;
-        public static final int usersurname=0x7f090014;
-    }
-    public static final class layout {
-        public static final int activity_login=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_signup=0x7f030002;
-        public static final int disease_list_layout=0x7f030003;
-        public static final int user_details=0x7f030004;
-=======
-        public static final int action_settings=0x7f090012;
-        public static final int addLocation=0x7f09000d;
-        public static final int confirmPassword=0x7f09000c;
-        public static final int diseaseBlurb=0x7f090011;
-        public static final int diseaseImage=0x7f090010;
+        public static final int action_settings=0x7f09001b;
+        public static final int addLocation=0x7f09000f;
+        public static final int button1=0x7f090008;
+        public static final int button2=0x7f090009;
+        public static final int confirmPassword=0x7f09000e;
+        public static final int diseaseBlurb=0x7f09001a;
+        public static final int diseaseImage=0x7f090019;
         public static final int diseaseName=0x7f090005;
         public static final int editText1=0x7f090006;
-        public static final int email=0x7f09000b;
+        public static final int email=0x7f09000d;
         public static final int enterEmail=0x7f090001;
         public static final int enterPassword=0x7f090002;
-        public static final int firstName=0x7f090008;
-        public static final int healthCoordinator=0x7f09000f;
-        public static final int lastName=0x7f090009;
+        public static final int firstName=0x7f09000a;
+        public static final int healthCoordinator=0x7f090011;
+        public static final int item1=0x7f09001c;
+        public static final int lastName=0x7f09000b;
         public static final int listView1=0x7f090007;
         public static final int loginButton=0x7f090004;
-        public static final int password=0x7f09000a;
-        public static final int signupBtn=0x7f09000e;
+        public static final int password=0x7f09000c;
+        public static final int signupBtn=0x7f090010;
         public static final int signupLink=0x7f090003;
         public static final int textView1=0x7f090000;
+        public static final int textView5=0x7f090014;
+        public static final int textView6=0x7f090016;
+        public static final int textView7=0x7f090017;
+        public static final int userdetails=0x7f090012;
+        public static final int useremail=0x7f090018;
+        public static final int username=0x7f090013;
+        public static final int usersurname=0x7f090015;
     }
     public static final class layout {
         public static final int activity_disease_detail=0x7f030000;
         public static final int activity_login=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int activity_signup=0x7f030003;
-        public static final int disease_list_layout=0x7f030004;
->>>>>>> 49a5b10b8e3d380cc6d86a3cd875f710fb8f1744
+        public static final int activity_main_menu=0x7f030003;
+        public static final int activity_signup=0x7f030004;
+        public static final int activity_user=0x7f030005;
+        public static final int disease_list_layout=0x7f030006;
     }
     public static final class menu {
         public static final int login=0x7f080000;
         public static final int main=0x7f080001;
-        public static final int signup=0x7f080002;
+        public static final int main_menu=0x7f080002;
+        public static final int signup=0x7f080003;
+        public static final int user=0x7f080004;
     }
     public static final class string {
         public static final int AddLocation=0x7f06000e;
@@ -118,13 +100,16 @@ public final class R {
         public static final int app_name=0x7f060000;
         public static final int diseaseimage=0x7f060012;
         public static final int hello_world=0x7f060002;
+        public static final int profile=0x7f060014;
         public static final int title_activity_disease_detail=0x7f060013;
         public static final int title_activity_main=0x7f060009;
+        public static final int title_activity_main_menu=0x7f06001a;
         public static final int title_activity_signup=0x7f060008;
-        public static final int userdetails=0x7f060013;
-        public static final int useremail=0x7f060016;
-        public static final int username=0x7f060014;
-        public static final int usersurname=0x7f060015;
+        public static final int title_activity_user=0x7f060015;
+        public static final int userdetails=0x7f060016;
+        public static final int useremail=0x7f060019;
+        public static final int username=0x7f060017;
+        public static final int usersurname=0x7f060018;
     }
     public static final class style {
         /** 

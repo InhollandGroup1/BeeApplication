@@ -95,7 +95,7 @@ public class LoginActivity extends Activity {
 				JSONObject jObject = new JSONObject(responseString);		        
 		        if (jObject.getString("result").equals("success")) {
 		        	Log.d("debug", "attempting to start activity");
-		        	Intent i = new Intent(getApplicationContext(), MainActivity.class);
+		        	Intent i = new Intent(getApplicationContext(), MainMenuActivity.class);
 		    		startActivity(i);
 		        } else {
 		        	Toast.makeText(getApplicationContext(), jObject.getString("msg"), Toast.LENGTH_SHORT).show();
