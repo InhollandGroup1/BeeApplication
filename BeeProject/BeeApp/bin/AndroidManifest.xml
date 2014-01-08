@@ -28,14 +28,16 @@
         <activity
             android:name="com.beeapp.beeapp.SignupActivity"
             android:label="@string/title_activity_signup"
-            android:parentActivityName="LoginActivity" >
+            android:parentActivityName="LoginActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="LoginActivity" />
         </activity>
         <activity
             android:name="com.beeapp.beeapp.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main"
+            android:windowSoftInputMode="adjustResize">
         </activity>
         <activity
             android:name="com.beeapp.beeapp.DiseaseDetailActivity"
