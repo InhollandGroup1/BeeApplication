@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class DiseaseDetailActivity extends Activity {
@@ -34,14 +35,20 @@ public class DiseaseDetailActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_disease_detail);
-		String json = getIntent().getStringExtra("JSON");
-		TextView name = (TextView) this.findViewById(R.id.disease_detail_name);
+		final String json = getIntent().getStringExtra("JSON");
+		final TextView name = (TextView) this.findViewById(R.id.disease_detail_name);
 		TextView description = (TextView) this.findViewById(R.id.disease_detail_description);
 		Button btn = (Button) this.findViewById(R.id.button1);
 		
 		btn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-            	Log.d("debug DiseaseDetected", "Link disease to hive");
+            public void onClick(View v) {	
+            	try {
+					JSONObject jO = new JSONObject(json);
+					Toast.makeText(getApplicationContext(), "Attaching the disease: "+jO.getString("name")+" to your location.", Toast.LENGTH_SHORT).show();
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             }
         });
 		
