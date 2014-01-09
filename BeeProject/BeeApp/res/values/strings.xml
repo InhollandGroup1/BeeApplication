@@ -28,5 +28,7 @@
     <string name="usersurname">Surname: </string>
     <string name="useremail">Email: </string>
     <string name="title_activity_main_menu">MainMenuActivity</string>
-<string name="i_have_this_disease">My hive has this disease</string>
+    <string name="i_have_this_disease">My hive has this disease</string>
+    <string name="title_activity_message">MessageActivity</string>
+
 </resources>

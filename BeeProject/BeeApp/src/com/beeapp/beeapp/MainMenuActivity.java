@@ -20,6 +20,7 @@ public class MainMenuActivity extends Activity {
 		
 		Button btnNextSearch = (Button) findViewById(R.id.button1);
 		Button btnNextProfile = (Button) findViewById(R.id.button2);
+		Button btnAskCoord = (Button) findViewById(R.id.button3);
 		
 		 //Listening to button event
         btnNextSearch.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +40,18 @@ public class MainMenuActivity extends Activity {
             public void onClick(View arg0) {
                 //Starting a new Intent
                 Intent nextScreen = new Intent(getApplicationContext(), UserActivity.class);
+ 
+                startActivity(nextScreen);
+ 
+            }
+        });
+        
+      //Listening to button event
+        btnAskCoord.setOnClickListener(new View.OnClickListener() {
+ 
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), MessageActivity.class);
  
                 startActivity(nextScreen);
  

@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/androidb" >
+   >
 
     <ImageView
         android:id="@+id/diseaseImage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.34"
         android:contentDescription="@string/diseaseimage"
@@ -15,16 +15,16 @@
 
     <TextView
         android:id="@+id/diseaseName"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="0.34"
         android:text="@string/diseaseimage"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     
     <TextView
         android:id="@+id/diseaseBlurb"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="0.34"
         android:text="@string/diseaseimage"
         android:textAppearance="?android:attr/textAppearanceSmall" />
