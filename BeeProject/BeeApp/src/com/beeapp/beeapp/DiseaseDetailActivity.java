@@ -14,11 +14,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class DiseaseDetailActivity extends Activity {
 	
@@ -31,7 +36,13 @@ public class DiseaseDetailActivity extends Activity {
 		setContentView(R.layout.activity_disease_detail);
 		int id = getIntent().getIntExtra("Id", -1);
 		TextView tv = (TextView) this.findViewById(R.id.textView1);
+		Button btn = (Button) this.findViewById(R.id.button1);
 		
+		btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	Log.d("debug DiseaseDetected", "Link disease to hive");
+            }
+        });
 		//tv.setText(json);
 	}
 
