@@ -29,7 +29,7 @@
             android:name="com.beeapp.beeapp.SignupActivity"
             android:label="@string/title_activity_signup"
             android:parentActivityName="LoginActivity"
-            android:windowSoftInputMode="stateVisible|adjustResize" >
+            android:windowSoftInputMode="adjustPan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="LoginActivity" />

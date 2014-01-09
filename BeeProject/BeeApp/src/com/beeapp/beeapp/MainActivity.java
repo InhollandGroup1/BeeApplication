@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -77,6 +78,7 @@ public class MainActivity extends Activity implements TextWatcher {
 		adapter = new DiseaseImageAdapter(this, R.layout.disease_list_layout, list);
 		gallery = (ListView) this.findViewById(R.id.listView1);
 		gallery.setAdapter(adapter);
+		gallery.setBackgroundColor(Color.WHITE);
 		search = (EditText) this.findViewById(R.id.editText1);
 		search.addTextChangedListener(this);
 		
