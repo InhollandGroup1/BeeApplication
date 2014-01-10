@@ -35,7 +35,7 @@ public class DiseaseDetailActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_disease_detail);
 		int id = getIntent().getIntExtra("Id", -1);
-		TextView tv = (TextView) this.findViewById(R.id.textView1);
+		TextView tv = (TextView) this.findViewById(R.id.disease_detail_name);
 		Button btn = (Button) this.findViewById(R.id.button1);
 		
 		btn.setOnClickListener(new View.OnClickListener() {
