@@ -30,10 +30,31 @@ public class DiseaseImageAdapter extends ArrayAdapter<JSONObject> {
 	    LayoutInflater inflater = (LayoutInflater) context
 	        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	    View rowView = inflater.inflate(R.layout.disease_list_layout, parent, false);
+	    
+	    ImageView imageView = (ImageView) rowView.findViewById(R.id.diseaseImage);	    
+	    imageView.setImageResource(getImageResource(position));
+	    
 	    TextView diseaseName = (TextView) rowView.findViewById(R.id.diseaseName);
 	    TextView diseaseBlurb = (TextView) rowView.findViewById(R.id.diseaseBlurb);
-	    ImageView imageView = (ImageView) rowView.findViewById(R.id.diseaseImage);
-	    int i = (position % 8) + 1;
+	    try {
+			diseaseName.setText(list.get(position).getString("name"));
+			diseaseBlurb.setText(getDiseaseBlurb(list.get(position).getString("description")));
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+	    return rowView;
+	  }
+	
+	private String getDiseaseBlurb(String description) {
+		if (description.equalsIgnoreCase("null")) return "";
+		int end = Math.min(description.length(), 55);
+		String blurb = description.substring(0, end);
+		if (end == 55) blurb += "...";		
+		return blurb;
+	}
+	
+	private int getImageResource(int position) {
+		int i = (position % 8) + 1;
 	    int res = R.drawable.d1;
 	    switch (i) {
 		case 2:
@@ -63,15 +84,7 @@ public class DiseaseImageAdapter extends ArrayAdapter<JSONObject> {
 		default:
 			break;
 		}
-	    imageView.setImageResource(res);
-	    try {
-			diseaseName.setText(list.get(position).getString("name"));
-			// TODO: get blurb somehow, or leave it
-			diseaseBlurb.setText("Varroa mites are generally identified by their tiny red appea...");
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-	    return rowView;
-	  }
+	    return res;
+	}
 
 }
