@@ -14,37 +14,34 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 
 public class DiseaseDetailActivity extends Activity {
 	
 	DiseaseDetailAdapter treatmentAdapter;
 	DiseaseDetailAdapter symptomAdapter;
+	JSONObject disease;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_disease_detail);
-		final String json = getIntent().getStringExtra("JSON");
-		final TextView name = (TextView) this.findViewById(R.id.disease_detail_name);
+		String json = getIntent().getStringExtra("JSON");
+		TextView name = (TextView) this.findViewById(R.id.disease_detail_name);
 		TextView description = (TextView) this.findViewById(R.id.disease_detail_description);
 		Button btn = (Button) this.findViewById(R.id.button1);
 		
 		btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {	
             	try {
-					JSONObject jO = new JSONObject(json);
-					Toast.makeText(getApplicationContext(), "Attaching the disease: "+jO.getString("name")+" to your location.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Attaching the disease: "+disease.getString("name")+" to your location.", Toast.LENGTH_SHORT).show();
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -52,10 +49,12 @@ public class DiseaseDetailActivity extends Activity {
             }
         });
 		
+		JSONObject disease = new JSONObject();
+		
 		try {
-			JSONObject jO = new JSONObject(json);
-			name.setText(jO.getString("name"));
-			description.setText(jO.getString("description"));
+			disease = new JSONObject(json);
+			name.setText(disease.getString("name"));
+			description.setText(disease.getString("description"));
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
