@@ -34,7 +34,7 @@ public class DiseaseDetailActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_disease_detail);
-		int id = getIntent().getIntExtra("Id", -1);
+		String json = getIntent().getStringExtra("JSON");
 		TextView name = (TextView) this.findViewById(R.id.disease_detail_name);
 		TextView description = (TextView) this.findViewById(R.id.disease_detail_description);
 		Button btn = (Button) this.findViewById(R.id.button1);
