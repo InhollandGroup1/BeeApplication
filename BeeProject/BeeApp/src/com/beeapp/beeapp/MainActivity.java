@@ -91,6 +91,8 @@ public class MainActivity extends Activity implements TextWatcher {
 		    	  startActivity(intent);
 		      }
 	    });
+		
+		timerRunnable.run();
 	}
 	
 	
