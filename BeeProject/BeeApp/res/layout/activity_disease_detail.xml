@@ -23,4 +23,16 @@
         android:layout_height="wrap_content"
         android:text="@string/i_have_this_disease" />
 
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/treatment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
 </LinearLayout>
