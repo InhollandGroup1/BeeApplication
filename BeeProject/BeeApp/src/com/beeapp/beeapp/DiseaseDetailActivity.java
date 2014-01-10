@@ -44,7 +44,15 @@ public class DiseaseDetailActivity extends Activity {
             	Log.d("debug DiseaseDetected", "Link disease to hive");
             }
         });
-		//tv.setText(json);
+		
+		try {
+			JSONObject jO = new JSONObject(json);
+			name.setText(jO.getString("name"));
+			description.setText(jO.getString("description"));
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
