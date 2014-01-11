@@ -37,13 +37,11 @@ public class MapActivity extends Activity {
 
         // Get a handle to the Map Fragment
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map_fragment)).getMap();
-        map.setMyLocationEnabled(true);        
+        map.setMyLocationEnabled(true);
+        LatLng ams = new LatLng(52.3790, 4.901);
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(ams, 10));
         
         new HttpCallout().execute();
-
-        //LatLng home = new LatLng(53.387, 4.72);
-
-        //map.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 13));
     }
 
 	@Override
@@ -56,11 +54,13 @@ public class MapActivity extends Activity {
 	public void addMarkerToMap(JSONObject json) {
 		try {
 			String name = json.getString("name");
+			String date = json.getString("date_reported");
+			String user = json.getString("firstname") + " " + json.getString("lastname");
 			double lat = json.getDouble("latitude");
 			double lon = json.getDouble("longitude");
 			LatLng pos = new LatLng(lat, lon);
 			map.addMarker(new MarkerOptions().title(name)
-	            .snippet("On: 2014-01-09")
+	            .snippet("Reported by " + user + " (on " + date + ")")
 	            .position(pos));
 			
 		} catch (JSONException e) {
