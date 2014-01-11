@@ -29,5 +29,13 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/button2"
         android:text="Ask a Health Coordinator" />
+
+     <Button
+         android:id="@+id/button4"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_centerVertical="true"
+         android:text="@string/disease_map" />
 	
 </RelativeLayout>

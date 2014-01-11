@@ -30,5 +30,7 @@
     <string name="title_activity_main_menu">MainMenuActivity</string>
     <string name="i_have_this_disease">My hive has this disease</string>
     <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="disease_map">Disease Map</string>
 
 </resources>
