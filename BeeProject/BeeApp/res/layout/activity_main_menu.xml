@@ -37,5 +37,13 @@
          android:layout_centerHorizontal="true"
          android:layout_centerVertical="true"
          android:text="@string/disease_map" />
+
+     <Button
+         android:id="@+id/button5"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/button4"
+         android:layout_centerHorizontal="true"
+         android:text="@string/sign_out" />
 	
 </RelativeLayout>

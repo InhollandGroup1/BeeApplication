@@ -32,5 +32,8 @@
     <string name="title_activity_message">MessageActivity</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="disease_map">Disease Map</string>
+    <string name="main_menu">Back to main menu</string>
+    <string name="save_profile">Save your profile</string>
+    <string name="sign_out">Sign out</string>
 
 </resources>
