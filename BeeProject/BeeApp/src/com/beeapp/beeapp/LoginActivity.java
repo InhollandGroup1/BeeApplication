@@ -95,9 +95,13 @@ public class LoginActivity extends Activity {
 				JSONObject jObject = new JSONObject(responseString);		        
 		        if (jObject.getString("result").equals("success")) {
 		        	Log.d("debug", "attempting to start activity");
-		        	int id = jObject.getInt("id");
+		        	// Save the user details
+		        	DatabaseHelper dh = new DatabaseHelper(getApplicationContext());
+		        	UserObject user = new UserObject(jObject.getInt("id"), jObject.getString("email"),
+		        			jObject.getString("firstname"), jObject.getString("lastname"));
+		        	dh.setUser(user);
+		        	// Go to main menu
 		        	Intent i = new Intent(getApplicationContext(), MainMenuActivity.class);
-		        	i.putExtra("id", id);
 		    		startActivity(i);
 		        } else {
 		        	Toast.makeText(getApplicationContext(), jObject.getString("msg"), Toast.LENGTH_SHORT).show();
